@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: yellow;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  width: 1200px;
+  background-color: green;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+li {
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* No flex on the children */
+.first-container {
+  justify-content: space-between;
+}
+
+/* Equally spaced */
+.second-container {
+  gap: 20px;
+}
+
+.second-container li {
+  flex: 1;
+}
+
+/* One element bigger */
+
+.third-container {
+  gap: 20px;
+}
+
+.third-container li:first-child {
+  flex: 2;
+}
+
+.third-container li:last-child,
+.third-container li:nth-child(2) {
+  flex: 1;
+}
+
+/* One element bigger, one even bigger */
+.fourth-container {
+  gap: 20px;
+}
+
+.fourth-container li:first-child {
+  flex: 2;
+}
+
+.fourth-container li:nth-child(2) {
+  flex: 3;
+}
+
+.fourth-container li:last-child {
+  flex: 1;
+}
